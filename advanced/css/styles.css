@@ -1,0 +1,501 @@
+/*
+***Reset for control "Cross Browsing"***
+Adapted from YUI Yahoo!
+*/
+*, html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big,
+cite, code, del, dfn, em, font, img,
+ins, kbd, q, s, samp, small, strike,
+strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+center, u, b, i {margin: 0;padding: 0;border: 0;outline: 0;font-weight: normal;font-style: normal;font-size: 100%;font-family: inherit;vertical-align: baseline;}
+body {line-height: 1}
+:focus {outline: 0;color: #0CA8E5;text-decoration:none;}
+ol, ul {list-style: none}
+table {border-collapse: collapse;border-spacing: 0}
+blockquote:before, blockquote:after, q:before, q:after {content: ""}
+blockquote, q {quotes: "" ""}
+input, textarea {margin: 0;padding: 0}
+hr {margin: 0;padding: 0;border: 0;color: #000;background-color: #000;height: 1px}
+strong{font-family:inherit;font-size:inherit;color:inherit;}
+
+/* CSS DOCUMENTATION:
+
+* GENERAL
+** THE WALL
+*** CONTENT
+**** FOOTER
+***** SPECIAL
+****** TYPOGRAPHY
+******* COLOR SCHEME
+
+*/
+
+/*ALL THESE STYLES ARE FOR SCREEN 1440X900 AND HIGHER RESOLUTIONS.
+  FOR MINOR RESOLUTIONS SEE STYLES IN ASSETS FOLDER*/
+
+/*********************************************
+* GENERAL
+*********************************************/
+/*reduce the default browser font size from 16px to 10px because
+we are working in em and we need a rounded measure*/
+body{font-size: 62.5%;background-color:#000;}
+/* HTML5 tags */
+header, section, footer,
+aside, nav, article, figure {
+	display: block;
+}
+/*shorts for floats and clears*/
+.float-left{float:left;}
+.float-right{float:right;}
+.hidden{visibility:hidden;}
+/* advanced clearfix for fix floating elements */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+.clear{clear:both;}/*basic way for clearing floats*/
+.clear-block{clear:both;display:block;}/*basic way for clearing floats throw spans*/
+
+
+body {
+  font-family: font-family: 'Maven Pro', Helvetica, arial, sans;
+  font-size: 1em;
+  #font-size: .7em;
+  font-style: normal;
+  font-weight: 700;
+  text-shadow: none;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1em;
+  overflow-x:hidden;
+}
+
+nav, #wrapper {
+	 -webkit-text-shadow: 0 1px 1px rgba(255,255,255,.3);
+	 -moz-text-shadow: 0 1px 1px rgba(255,255,255,.3);
+     -webkit-font-smoothing: subpixel-antialiased;
+     -moz-font-smoothing: subpixel-antialiased;
+     -o-font-smoothing: subpixel-antialiased;
+     font-smoothing: subpixel-antialiased;
+}
+#wrapper{margin-top:-20px;}
+body#top-nav #wrapper{margin-top:0;}
+
+
+/*********************************************
+* THE WALL // HOME SECTION WITH WORKS
+*********************************************/
+#top-title-bar{display:block;position:fixed;top:0;width:100%;height:40px;background:#000;z-index:2000;}
+#top-title-bar-sdevice{position:fixed;top:0;width:100%;height:20px;background:#000;z-index:2000;display:none;}
+#top-title-bar-sdevice figure{width:390px;margin:0 auto;}
+#top-title-bar figure{width:240px;margin:8px auto 0 auto;}
+h1{position:absolute;text-indent:-9999px;}
+
+#thumb-wrapper{margin-top:40px;*padding-top:40px;width:100%;overflow:hidden;background:#000;}
+#top-nav .the-margin{margin-top:0px;}/*this class is only for cover the little margin when menu slides in top navigation mode. Class is add it using js*/
+#thumbs{width: 100%;}
+.thumb{float: left;width: 175px;/*Set default width*/opacity:0.4;overflow:hidden;}
+.thumb:hover{-moz-transition: opacity 0.3s;-webkit-transition: opacity 0.3s;-o-transition: opacity 0.3s;transition: opacity 0.3s;opacity:1;}
+.thumb a img{
+/*Flexible image size with border*/
+	width: 100%;  /*Took 1% off of the width to prevent IE6 bug*/
+	margin: 0 auto;
+	display:none;
+	-ms-interpolation-mode: bicubic; /*prevents image pixelation for IE 6/7 */
+	overflow:hidden;
+}
+.thumb:hover{cursor:pointer;}
+.thumb a img:hover{cursor:pointer;}
+
+ul#thumbs li.thumb img#imgLoad{
+    height: auto;
+    margin-left: 95px;
+    margin-top: -75px;
+    opacity: 1;
+    position: absolute;
+    visibility: visible;
+    width: auto;
+    z-index: 999999;
+}
+#work-detail-wrapper{position:relative;height:0;display:block;background:#000;background-position:center center;display:none;overflow:hidden;}
+#work-detail-wrapper p{display:block;}
+
+#wrapper{position:relative;overflow:hidden;}
+
+/*top navigation rule. All the rules starting with body#top-nav are refernt to this mode.*/
+body#top-nav #thumb-wrapper{margin-top:0px 0 0 0;*padding-top:0px;width:100%;overflow:hidden;background:#000;}
+
+
+/*********************************************
+*** NAVIGATION
+*********************************************/
+
+/*********NAV DEFAULT**************/
+nav#main-nav{position:fixed;display:block;background:url(../images/backgrounds/pattern-nav-01.png) #f9f9f9;height:100%;top:0;left:0;z-index:1000;box-shadow: 2px 0 10px rgba(0,0,0,0.30);}
+#main-nav #tab-nav{display:block;position:absolute;right:-40px;top:46%;width:42px;height:42px;}
+#main-nav #tab-nav img{display:block;width:42px;height:42px;background:url(../images/tab-nav-single.png) no-repeat;margin-left:20px;}
+#main-nav #nav-menu{position:relative;font-family:'Terminal Dosis Light', 'Raleway', 'Maven Pro', Helvetica, arial, sans;width:200px;height:100%;padding:0 10px 0 20px;}
+#main-nav #nav-menu h4{font-size:.75em;margin:0 0 8px 10px;text-transform:uppercase;}
+#main-nav #nav-menu #filters{position:relative;margin-top:10%;}
+#main-nav #nav-options{position:absolute;height:400px;bottom:5%;margin-left:5%;}
+
+#main-nav #nav-menu #main-logo{
+	display:block;
+	text-indent:-9999px;
+	background:url(../images/logo-navigation.png) no-repeat;
+	width:356px;
+	height:34px;
+	margin-left:-175px;
+	padding:0;
+	-moz-box-shadow: -5px 5px rgba(255,228,64,1);
+	-webkit-box-shadow: -5px 5px rgba(255,228,64,1);
+	box-shadow: -5px 5px rgba(255,228,64,1);
+	}
+nav#main-nav #nav-options ul{display:block;margin-bottom:15%;width:220px;}
+nav#main-nav #nav-options ul li{display:block;padding:0 0 0 0px;}
+nav#main-nav #nav-options ul li a{
+	display:inline;
+	-moz-transition: all .7s; 
+	-webkit-transition: all .7s; 
+	-o-transition: all .7s; 
+	transition: all .7s;
+	width:90%;
+	background:transparent;
+    font-size: 1.45em;
+    *font-size: 2em;
+    font-style: italic;
+	font-weight:100;
+	font-weight:300\9;
+    line-height: .95em;
+	color:#313131;
+	display:block;
+	text-decoration:none;
+	padding-left:10px;
+	}
+nav#main-nav #nav-options ul li a:hover{
+	-moz-transition: all 0.2s; 
+	-webkit-transition: all 0.2s; 
+	-o-transition: all 0.2s; 
+	transition: all 0.2s;
+	background:#ffea00;
+	color:#000;
+	width:75%;
+	padding-left:15px;
+	}
+nav#main-nav #nav-options ul li.active{padding-left:0px;}
+nav#main-nav #social-wrapper{position:relative;font:normal .85em/1.7em 'Maven Pro', sans;height:30px;margin:50px 0 50px -5px;padding:0;}
+nav#main-nav #social-wrapper ul#network-menu{font-size:.75em;position:relative;width:250px;margin:0;padding:0;}
+nav#main-nav ul#network-menu li{*width:55px;#float:left;#font-size:1.2em;}
+nav#main-nav ul#network-menu li a{display:block;height:23px;float:left;margin-right:10px;color:#000;border-top:0px solid #ffea00;text-decoration:none;-moz-transition: all .2s; -webkit-transition: all .2s;-o-transition: all .2s;transition: all .2;}
+nav#main-nav ul#network-menu li a:hover{border-top:5px solid #ffea00;-moz-transition: all .2s; -webkit-transition: all .2s;-o-transition: all .2s;transition: all .2s;}
+nav#main-nav p#copyright{position:absolute;top:98%;margin-left:0px;font-size:.55em;color:#989898;padding-left:20px;}
+nav#main-nav #nav-options ul li #filters-launcher{display:none;}
+nav#main-nav #tap-close{display:none;}
+nav#main-nav .close-sub{display:none;}
+
+/*TOP NAVIGATION STYLES*/
+
+body#top-nav #slide-controls{display:none;}
+body#top-nav #slide-controls{display:block;width:34px;margin-top:25px;position:fixed;z-index:2000;}
+body#top-nav #slide-controls p{position:absolute;}
+body#top-nav p.launch-nav a{position:relative;display:block;width:34px;height:34px;background:url(../images/btn-open-top-nav.png) no-repeat center;margin:0 auto;padding:50px 0 0 0;text-indent:-9999px;}
+body#top-nav nav#main-nav{position:relative;display:block;height:350px;width:100%;top:0;left:0;z-index:1000;}
+body#top-nav p.scroll-to-menu{display:none;}
+body#top-nav p.show{display:block;}
+body#top-nav p.scroll-to-menu a{position:relative;display:block;width:34px;height:34px;background:url(../images/btn-scroll-top-nav.png) no-repeat center;margin:0 auto;padding:50px 0 0 0;text-indent:-9999px;}
+body#top-nav p.open-nav a{background:url(../images/btn-close-top-nav.png) no-repeat center;}
+body#top-nav p.thepixels{color:#000;left:100px;}
+body#top-nav nav#main-nav{display:none;}
+body#top-nav #main-nav #nav-menu{width:97%;height:300px;padding-top:50px;}
+body#top-nav #main-nav #nav-menu h4{margin:0 0 10px 0;}
+body#top-nav #main-nav #nav-menu #filters{position:relative;margin-top:0%;width:auto;float:left;}
+body#top-nav #main-nav ul{display:block;width:250px;display:block;float: left;}
+body#top-nav #main-nav #nav-options{width:90%;height:300px;margin-left:10%;}
+body#top-nav #main-nav #nav-menu #main-logo{margin:35px 0 30px -85px;}
+body#top-nav nav#main-nav #nav-options #filter{margin-top:-100px;}
+body#top-nav nav#main-nav #nav-options ul{position:relative;display:block;float:left;}
+body#top-nav nav#main-nav #social-wrapper{position:absolute;width:100%;top:25px;z-index:100;}
+body#top-nav nav#main-nav #social-wrapper ul{float:right;}
+body#top-nav nav#main-nav p#copyright{margin:-30px 0 0 10%;}
+
+
+/*********************************************
+**** WORKS SECTION
+*********************************************/
+
+/**** WORK SKIN GAL THUMBS FULL (DEFAULT WORK VIEW) ****/
+#work-detail-wrapper .item-wrapper .item .info-work{
+	font-family:'Terminal Dosis Light', 'Raleway', 'Maven Pro', Helvetica, arial, sans;
+	position: absolute;
+	width:100%;
+	height:320px;
+	top:90%;
+	background-color:#000;
+	z-index:99;
+	color: #999;
+	border-top:8px solid #ffea00;
+	padding:30px 15px 30px 80px;
+}
+#work-detail-wrapper span#closebt{
+	position:absolute;
+	display:block;
+	top:7%;
+	right:4%;
+	width:39px;
+	height:39px;
+	z-index:200;
+	cursor: pointer;
+}
+#work-detail-wrapper span#closebt a{opacity:.3;transition: opacity 0.4s;-webkit-transition: opacity 0.4s;-moz-transition: opacity 0.4s;display:block;width:39px;height:39px;background:url(../images/btn-close-black.png) no-repeat;text-indent:-9999px;}
+#work-detail-wrapper span#closebt a:hover{opacity:1;}
+#work-detail-wrapper .item-wrapper span#closebt a{display:block;width:15px;height:15px;background:url(../images/btn-close-white.png) no-repeat;text-indent:-9999px;margin-left:-55px;}
+#work-detail-wrapper .item-wrapper span#closebt a:hover{background:url(../images/btn-close-yellow.png) no-repeat;}
+#work-gal{font-family:'Terminal Dosis Light', 'Raleway', 'Maven Pro', Helvetica, arial, sans;font-size:.8em;}
+#work-gal p{font-family:'Maven Pro', helvetica, arial, sans;font-size:1em;*font-size:1.4em;width:510px;margin:10px 50px 0 0;float:left;}
+#work-gal p a{text-decoration:none;text-transform:uppercase;font-size:.8em;padding:2px;color:#ffea00;-moz-transition: all .3s;-webkit-transition: all .3s;-o-transition: all .3s;transition: all .3s;}
+#work-gal p a:hover{-moz-transition: all .7s;-webkit-transition: all .7s;-o-transition: all .7s;transition: all .7s;background:#ffea00;color:#000;}
+#work-gal #overview{display:block;text-transform:uppercase;font-size:.9em;}
+#work-gal h3{display:inline;font-size:1.9em;*font-size:1.8em;color:#ffea00;border-bottom:1px solid #ffea00;padding-bottom:8px;line-height:3em;}
+#work-gal #pagination{margin-left:40px;}
+#work-gal #pagination a{text-decoration:none;line-height:15px;padding:8px;color:#999;-moz-transition: all .3s;-webkit-transition: all .3s;-o-transition: all .3s;transition: all .3s;}
+#work-gal #pagination a:hover{color:#ffea00;}
+#work-gal .info-extended{display:block;font-size:.9em;*font-size:1em;text-transform:uppercase;font-weight:bold;color:#ffea00;margin-top:12px;}
+#work-gal .info-extended li{display:block;}
+#work-gal .info-extended li span{color:#999;padding-left:30px;}
+#work-gal .info-extended li:last-child span{margin-left:-8px;}
+
+
+/**** WORK SKIN GAL PHOTOGRAPHER ****/
+#work-detail-wrapper #work-gal-photo{background:#000;font-family:'Terminal Dosis Light', 'Raleway', 'Maven Pro', Helvetica, arial, sans;font-size:.8em;*font-size:1.2em;}
+#work-detail-wrapper #work-gal-photo .item .info-work{
+	position: absolute;
+	width:100%;
+	height:190px;
+	top:99%;
+	background:url(../images/backgrounds/micro_carbon.png) #111111;
+	z-index:99;
+	color: #999;
+	border-top:8px solid #ffea00;
+	padding:15px 0px 30px 0px;
+}
+#work-detail-wrapper #work-gal-photo .item .info-work #info{width:50%;text-align:center;margin:0 25% 0 25%;}
+#work-detail-wrapper #work-gal-photo .item-wrapper span#closebt{position:absolute;display:block;right:-10%;margin-right:100px;width:15px;height:15px;z-index:99;cursor: pointer;}
+#work-detail-wrapper #work-gal-photo .item-wrapper span#closebt a{display:block;width:15px;height:15px;background:url(../images/btn-close-white.png) no-repeat;text-indent:-9999px;}
+#work-detail-wrapper #work-gal-photo .item-wrapper span#closebt a:hover{background:url(../images/btn-close-yellow.png) no-repeat;}
+#work-detail-wrapper #work-gal-photo h3{display:block;font-size:1.8em;color:#ffea00;line-height:1.3em;text-transform:uppercase;margin-bottom:10px;}
+#work-detail-wrapper #work-gal-photo p{font-family:'Maven Pro', helvetica, arial, sans;color:#eeeeee;line-height:1.5em;width:450px;margin:0 auto;}
+#work-detail-wrapper #work-gal-photo p a{text-decoration:none;text-transform:uppercase;padding:2px;color:#ffea00;-moz-transition: all .3s;-webkit-transition: all .3s;-o-transition: all .3s;transition: all .3s;}
+#work-detail-wrapper #work-gal-photo p a:hover{-moz-transition: all .7s;-webkit-transition: all .7s;-o-transition: all .7s;transition: all .7s;background:#ffea00;color:#000;}
+#work-detail-wrapper #work-gal-photo #pagination{display:block;margin:0 0 15px 0px;font-size:1em;}
+#work-detail-wrapper #work-gal-photo #pagination a{text-decoration:none;line-height:15px;padding:8px;color:#999;-moz-transition: all .3s;-webkit-transition: all .3s;-o-transition: all .3s;transition: all .3s;}
+#work-detail-wrapper #work-gal-photo #pagination a:hover{color:#ffea00;}
+
+#work-detail-wrapper #work-gal-photo div#divThumbs{position: relative;width:100%;height:80px;background: #000;top:-101%;float:left;text-align:center;margin-top:-120px;border-top:8px solid #ffea00;}
+#work-gal-photo #fdgNav span#fdgPrev{float:left;background:url(../images/slide-pixel-l-arrow-release-photo.png) no-repeat center center;}
+#work-gal-photo #fdgNav span#fdgPrev:hover{background:url(../images/slide-pixel-l-arrow-hover-photo.png) no-repeat center center}
+#work-gal-photo #fdgNav span#fdgNext{float:right;background: url(../images/slide-pixel-r-arrow-release-photo.png) no-repeat center center;}
+#work-gal-photo #fdgNav span#fdgNext:hover{background:url(../images/slide-pixel-r-arrow-hover-photo.png) no-repeat center center}
+#work-gal-photo #fdgNav span#fdgPrev.hide, #work-gal-photo #fdgNav span#fdgNext.hide{background:none;cursor: default;}
+
+#work-detail-wrapper{position:relative;z-index:20;background:#f2f2f2;}
+#work-detail-wrapper .item-wrapper .item{position:relative;}
+#work-detail-wrapper .item-wrapper .item #slideshow{width:100%;height:100%;overflow:hidden;}
+#work-detail-wrapper .item-wrapper .item .info-work h3{position:relative;}
+.item-wrapper{position: absolute;z-index:50;width:100%;height:100%;overflow:hidden;}
+
+
+/*********************************************
+*** SECTIONS
+*********************************************/
+
+/**** SECTION - DEF SKIN (base styles based on higher reolutions to 1440px. Rest resolutions are managed in media queries)****/
+.section{position:relative;font:normal 1em/1.7em 'Terminal Dosis Light', 'Raleway', 'Maven Pro', Helvetica, sans;font-weight:100;width:100%;height:100%;background:#f2f2f2;}
+.section-wrapper{position:relative;width:960px;left:12%;top:16%;color:#414141;text-transform:uppercase;}
+.section-wrapper .breadcrumbs{font-size:1em;font:normal .7em/1.7em 'Arvo', Georgia, serif;}
+h2{font:normal 1em/1.7em 'Terminal Dosis Light', 'Raleway', 'Maven Pro', Helvetica, sans;display:block;width:960px;font-size:2em;line-height:1.8em;border-top:2px solid #ffea00;border-bottom:2px solid #ffea00;padding:0;margin:10px 0 60px 0;}
+
+/**** ABOUT - DEF SKIN ****/
+#about .section-intro{font-family:'Terminal Dosis Light', 'Raleway', 'Maven Pro', Helvetica, sans;font-size:2.5em;line-height:1.1em;font-style:normal;margin:20px 0 0px 0;}
+#about .claim{font-family:'Arvo', serif;font-weight:600;font-style:normal;}
+#about .section-content{width:460px;margin-right:40px;float:left;}
+#about .section-content p{font:normal .85em/1.7em 'Maven Pro', sans;text-transform:none;margin:10px 0 15px 0;}
+#about figure{float:left;margin:10px 0 0 70px;}
+#about figure#dark{display:none;}/*Only for demo styles proposals*/
+
+
+/**** NEWS - DEF SKIN ****/
+#news .breadcrumbs{margin-bottom:20px;}
+#news h2{display:inline;padding:0 10px 0 10px;text-transform:uppercase;}
+.section-wrapper ul{width:360px;float:left;margin-right:100px;}
+.section-wrapper ul li{text-transform:none;font:normal .85em/1.7em 'Maven Pro', sans;*font-size:1.2em;line-height:1.5em;}
+#news .section-wrapper ul li h2{font-family:'Terminal Dosis Light', 'Raleway', 'Maven Pro', sans;font-size:2.35em;}
+.section-wrapper ul li small{display:block;margin:20px 0 10px 0;color:#bbb;margin-left:-15px;}
+.section-wrapper ul li a{text-decoration:none;text-transform:uppercase;font-size:.8em;background:#ffea00;padding:2px;color:#000;-moz-transition: all .3s;-webkit-transition: all .3s;-o-transition: all .3s;transition: all .3s;}
+.section-wrapper ul li a:hover{-moz-transition: all .7s;-webkit-transition: all .7s;-o-transition: all .7s;transition: all .7s;background:#000;color:#ffea00;}
+#wdgt-twitter h2{margin-bottom:30px;}
+.tweet .tweet_list li{margin-top:30px;}
+.tweet .tweet_list li>*{}
+.tweet .tweet_list li:first-child{margin-top:20px;}
+#wdgt-twitter .jta-tweet-list-item{padding:0px;margin:0px;}
+#wdgt-twitter .jta-tweet-text{font-style:italic;}
+#wdgt-twitter .jta-tweet-hashtag{background-color:transparent}
+#wdgt-twitter .jta-tweet-timestamp a{display:block;background-color:transparent;text-align:right;color:#bbb;}
+#wdgt-twitter .tweet_avatar img{display:none;}
+
+/**** DRIBBBLE - DEF SKIN ****/
+#work-detail-wrapper #mydribbble span#closebt{
+	position:absolute;
+	display:block;
+	right:0%;
+	margin-top:300px;
+	margin-right:110px;
+	width:15px;
+	height:15px;
+	z-index:99;
+	cursor: pointer;
+}
+#mydribbble h2{line-height:1.3em;margin:20px 0 20px 0;width:400px;}
+#mydribbble .avatar{border:5px solid #fff;float:left;margin:0 20px 20px 0;}
+#mydribbble #mydribbble-stats{font:normal .7em/1.7em 'Maven Pro', sans;line-height:1.5em;font-style:italic;line-height /*\**/: .5em\9}
+#mydribbble #mydribbble-stats{line-height:1.5em \0/IE9;}
+#mydribbble #mydribbble-stats a{text-decoration:none;text-transform:uppercase;font-style:italic;background:#ffea00;padding:2px;color:#000;-moz-transition: all .3s;-webkit-transition: all .3s;-o-transition: all .3s;transition: all .3s;}
+#mydribbble #mydribbble-stats a:hover{-moz-transition: all .7s;-webkit-transition: all .7s;-o-transition: all .7s;transition: all .7s;background:#000;color:#ffea00;}
+#mydribbble #username{padding-top:40px;line-height /*\**/: .5em\9}
+#mydribbble #username{padding-top /*\**/: 30px\9}
+#mydribbble #username{padding-top:40px \0/IE9;line-height:1.5em \0/IE9;}
+#mydribbble #mydribbble-drafts{position:absolute;left:530px;margin:-18px 0 0 -45px;z-index:1000;display:none\9;}
+#mydribbble #mydribbble-drafts{display /*\**/: none\9}
+#mydribbble #mydribbble-drafts .plus-following{display:block;width:10px;text-align:center;padding:1px 3px 1px 3px;font-size:1em;background:#ffea00;color:#000;display:none\9;}
+#mydribbble #mydribbble-drafts ul{display:none;padding-top:15px;display:none\9;}
+#mydribbble #mydribbble-drafts ul li a{background:#000;color:#ffea00;-moz-transition: all .3s;-webkit-transition: all .3s;-o-transition: all .3s;transition: all .3s;font-size:1.3em;line-height:1.5em;}
+#mydribbble #mydribbble-drafts ul li a:hover{background:#ffea00;color:#000;-moz-transition: all .3s;-webkit-transition: all .3s;-o-transition: all .3s;transition: all .3s;}
+#mydribbble #mydribbble-shots{width:1350px;margin-top:0px;}
+#mydribbble ul.shots{width:440px;margin-top:50px;}
+#mydribbble ul.shots li{width:400px;display:block;float:left;margin-right:50px;}
+#mydribbble ul.shots li a.in-shot{display:block;width:400px;height:300px;border:10px solid #FFF;background:transparent;overflow:hidden;}
+#mydribbble ul.shots li #date-shot{color:#808080;font-size:.65em;text-align:center;margin-top:10px;text-transform:uppercase;}
+
+#mydribbble #slide-navigation{position:absolute;right:-350px;margin-top:-65px;}
+#mydribbble .btn-next, #mydribbble .btn-prev{position:relative;opacity:.6;font-family:'Terminal Dosis Light', 'Raleway', 'Maven Pro', Helvetica, arial, sans;font-size:2em;text-decoration:none;color:#313131;margin-right:35px;-moz-transition: all .3s;-webkit-transition: all .3s;-o-transition: all .3s;transition: all .3s;}
+#mydribbble .btn-next:hover, .btn-prev:hover{opacity:1;-moz-transition: all .3s;-webkit-transition: all .3s;-o-transition: all .3s;transition: all .3s;}
+
+
+/**** CONTACT - DEF SKIN ****/
+#contact h2{width:610px;}
+#contact ul{display:block;width:200px;position:relative;float:left;}
+#contact li.list-section{margin-bottom:30px;}
+#contact li small{display:inline;padding-left:20px;text-transform:uppercase;font-size:.7em;}
+#contact li:last-child{font-size:.8em;}
+div.contact-form{
+	float:left;
+	width:300px;
+	height:305px;
+	height /*\**/: 280px\9;
+	font:normal 1em "Maven Pro", Helvetica, sans;
+	background-color:#a3a3a3;
+	color:#e5e5e5;
+	border:1px solid #FFF;
+	border-top:5px solid #ffea00;
+	border-bottom:none;
+	margin-left:0px;
+	-moz-transition:color 0.2s ease-in, background-color 0.2s linear;
+    -webkit-transition:color 0.2s ease-in, background-color 0.2s linear;
+    -o-transition:color 0.2s ease-in, background-color 0.2s linear;
+	transition:color 0.2s ease-in, background-color 0.2s linear;
+	}
+div.contact-form:hover{background:#000;color:#ffea00;}
+div.contact-form form div#form-wrapper{margin:15px;}
+div.contact-form form div#field-name{margin-top:0px;}
+div.contact-form form label{display:block;letter-spacing:1px;text-transform:uppercase;margin:20px 0 10px 10px;font-size:.7em;}
+div.contact-form form input,textarea{width:250px;line-height:20px;padding:10px;color:#a3a3a3;}
+div.contact-form form input:focus,textarea:focus{color:#474747;border:none;font-style:italic;}
+div.contact-form form input#comments-submit{margin-left:190px;}
+div.contact-form form input.form-submit{
+	font-style:italic;
+	color:#a3a3a3;
+	width:100px;
+	margin:40px 10px 0 170px;
+	background:#e5e5e5;
+	-moz-transition:color 0.2s ease-in, background-color 0.1s linear;
+    -webkit-transition:color 0.2s ease-in, background-color 0.1s linear;
+    -o-transition:color 0.2s ease-in, background-color 0.1s linear;
+	transition:color 0.2s ease-in, background-color 0.1s linear;
+	}
+div.contact-form form input.form-submit:hover{background:#ffea00;color:#000;cursor:pointer;}
+
+div.contact-form form label.error {
+	position:absolute;
+	left:20px;
+	font-size:1em;
+	z-index:2000;
+	display:none;
+	text-indent:-9999px;
+	visibility:hidden;
+}
+div.contact-form div.error {position:absolute;font-size:.65em;margin:-22px 0 0 100px;color:#d1d1d1; }
+div.contact-form #success{text-align:center;margin-top:45%;}
+div.contact-form form input:focus {background-color:#F8E6A9;}
+
+/*********************************************
+**** SPECIAL
+*********************************************/
+
+/****************STYLR*********************/
+.get{display:none;}
+#stylr #stylr-launcher{position:absolute;top:110px;right:95px;display:block;width:113px;height:18px;background:url(../images/stylr/lbl-skin-customs-white.png) no-repeat;z-index:9999;}
+#stylr, #stylr-wrapper{position:absolute;width:425px;height:258px;margin-top:300px;right:10%;z-index:100;}
+#stylr{top:-21px;right:0%;}
+#stylr-wrapper{background:url(../images/stylr/bg-stylr.png) no-repeat;display:none;}
+#stylr ul a{text-decoration:none;}
+#stylr #stylr-launcher-active{position:absolute;top:90px;right:30px;display:block;width:113px;height:18px;background:url(../images/stylr/lbl-skin-customs-white.png) no-repeat;}
+#stylr #stylr-launcher-active{background:url(../images/stylr/lbl-skin-customs.png) no-repeat;}
+#stylr #stylr-wrapper{margin:20px;}
+#stylr ul{display:block;width:125px;float:left;}
+#stylr ul li{display:block;padding-left:45px;margin:0 auto;}
+#stylr ul li a{display:block;opacity:1;}
+#stylr ul li a:hover{opacity:.3;transition: opacity 0.4s;-webkit-transition: opacity 0.4s;-moz-transition: opacity 0.4s;}
+#stylr ul li.color-middle{margin:0 0 0 -33px;}
+#stylr ul li.color-middle a{float:left;width:25px;height:10px;margin-bottom:-16px;}
+#stylr ul li#list-title-high{background:url(../images/stylr/lbl-highlights.png) no-repeat;width:81px;height:26px;margin:15px 0 15px 20px;}
+#stylr ul li#list-title-nav{background:url(../images/stylr/lbl-nav-colors.png) no-repeat;width:97px;height:26px;margin:15px 0 15px 15px;}
+#stylr ul li.color-orange{margin-left:-2px;}
+#stylr ul li.color-yellow{margin-left:-1px;}
+#stylr ul li.color-orange a{background:url(../images/stylr/orange.png) no-repeat;width:33px;height:30px;}
+#stylr ul li.color-red a{background:url(../images/stylr/red.png) no-repeat;width:33px;height:30px;}
+#stylr ul li.color-blue a{background:url(../images/stylr/blue.png) no-repeat;width:33px;height:30px;}
+#stylr ul li.color-green a{background:url(../images/stylr/green.png) no-repeat;width:33px;height:30px;}
+#stylr ul li.color-yellow a{background:url(../images/stylr/yellow.png) no-repeat;width:33px;height:30px;}
+#stylr ul li.color-middle a.color-black{background:url(../images/stylr/black.png) no-repeat;width:33px;height:30px;}
+#stylr ul li.color-middle a.color-white{background:url(../images/stylr/white.png) no-repeat;width:3epx;height:30px;}
+
+
+
+/* iPhone 4 ----------- */
+/*@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {#main-nav{width:150px;background:#FFF;}}*/
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 0) and (min-device-width: 1025px) {
+::-webkit-scrollbar{width: 5px;height: 6px;}
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment{display: block;height: 10px;}
+::-webkit-scrollbar-button:vertical:increment{background-color: #fff;}
+::-webkit-scrollbar-track-piece{background-color: #eee;-webkit-border-radius: 3px;}
+::-webkit-scrollbar-thumb:vertical{height: 50px;background-color: #ffea00;-webkit-border-radius: 3px;}
+::-webkit-scrollbar-thumb:horizontal{width: 50px;background-color: #ccc;-webkit-border-radius: 3px;}
+}
+::selection{background: #ffea00;color:#404040;}
+::-moz-selection{background: #ffea00;color:#404040;}

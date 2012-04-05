@@ -1,0 +1,36 @@
+/* Styles for Scrollers */
+#mcs_container{position:relative; top:0px; margin:0; width:1100px; height:500px;}
+#mcs_container .customScrollBox{position:relative; height:100%; overflow:hidden;}
+#mcs_container .customScrollBox .container{position:relative; width:1000px; top:0; float:left;}
+#mcs_container .customScrollBox .content{clear:both;width:500px;}
+#mcs_container .customScrollBox .content p{padding:0 5px; margin:10px 0; color:#000; font-family:Verdana, Geneva, sans-serif; font-size:13px; line-height:20px;}
+#mcs_container .customScrollBox .content p.alt{padding:10px 5px; margin:10px 0; color:#000; font-family:Georgia, "Times New Roman", Times, serif; font-size:17px; line-height:19px; color:#999;}
+#mcs_container .customScrollBox img{border:5px solid #fff;}
+#mcs_container .dragger_container{position:relative; width:2px; height:500px; float:left; margin:10px 0 0 10px; background:#000; cursor:pointer -moz-border-radius:2px; -khtml-border-radius:2px; -webkit-border-radius:2px; border-radius:2px; cursor:s-resize;}
+#mcs_container .dragger{position:absolute; width:2px; height:60px;background:#999; text-align:center; line-height:60px; color:#666; overflow:hidden; cursor:pointer; -moz-border-radius:2px; -khtml-border-radius:2px; -webkit-border-radius:2px; border-radius:2px;}
+#mcs_container .dragger_pressed{position:absolute; width:4px; margin-left:-1px; height:60px; background:#999; text-align:center; line-height:60px; color:#666; overflow:hidden; -moz-border-radius:4px; -khtml-border-radius:4px; -webkit-border-radius:4px; border-radius:4px; cursor:s-resize;}
+#mcs_container .scrollUpBtn,#mcs_container .scrollDownBtn{position:absolute; display:inline-block; width:14px; height:15px; margin-right:12px; text-decoration:none; right:0; filter:alpha(opacity=20); -moz-opacity:0.20; -khtml-opacity:0.20; opacity:0.20;}
+#mcs_container .scrollUpBtn{top:16px; background:url(mcs_btnUp.png) center center no-repeat;}
+#mcs_container .scrollDownBtn{bottom:12px; background:url(mcs_btnDown.png) center center no-repeat;}
+#mcs_container .scrollUpBtn:hover,#mcs_container .scrollDownBtn:hover{filter:alpha(opacity=60); -moz-opacity:0.60; -khtml-opacity:0.60; opacity:0.60;}
+
+@media only screen 
+and (min-width : 841px) and (max-width : 1440px) {
+#mcs_container{width:680px;height:300px;}
+#mcs_container .customScrollBox .container{width:665px;}
+#mcs_container .dragger_container{height:300px;}
+}
+
+@media only screen 
+and (min-width : 450px) and (max-width : 840px) {
+#mcs_container{width:580px;height:220px;}
+#mcs_container .customScrollBox .container{width:565px;}
+#mcs_container .dragger_container{height:220px;}
+}
+
+@media only screen 
+and (max-width : 449px) {
+#mcs_container{width:265px;height:220px;}
+#mcs_container .customScrollBox .container{width:250px;}
+#mcs_container .dragger_container{height:220px;}
+}

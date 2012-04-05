@@ -1,0 +1,88 @@
+/*********************************************
+* STYLES FOR SKIN TWO
+*********************************************/
+nav#main-nav{background:url(../images/backgrounds/skin-text-dark.jpg);}
+body #about h2,body #news #wdgt-news h2, body #news #wdgt-twitter h2, body #mydribbble h2, body #contact h2{border-top:2px solid #f92e03;border-bottom:2px solid #f92e03;}
+body #about a, body #news a, body #mydribbble a, body #contact a{background-color:#f92e03;}
+body #about a:hover,body #news a:hover, body #contact a:hover{background-color:#000;color:#f92e03;}
+
+/*NAV*/
+body #main-nav #nav-menu p{color:#FFF;}
+body #main-nav #nav-menu>p{color:#8e8e8e;}
+body #main-nav #nav-menu>p strong{border-bottom: 2px solid #f92e03;}
+body #main-nav #nav-menu h4{color:#FFF;}
+body #main-nav #nav-menu h4 .dotted-underline{background:url(../images/pattern-dotted-underline-light.png) 0px 10px;}
+nav#main-nav #nav-options ul li a{color:#8e8e8e;}
+body nav#main-nav #nav-options ul li.active, body nav#main-nav #nav-options ul li a:hover{
+	-moz-transition: all 0.2s; 
+	-webkit-transition: all 0.2s; 
+	-o-transition: all 0.2s; 
+	transition: all 0.2s;
+	background:#f92e03;
+	color:#FFF;
+	width:75%;
+	padding-left:5px;
+	}
+	
+body nav#main-nav ul#network-menu li a{color:#8e8e8e;}
+nav#main-nav ul#network-menu li a:hover{border-top:5px solid #f92e03;color:#FFF;}
+#main-nav #nav-menu #main-logo{
+	-moz-box-shadow: -5px 5px rgba(249,46,6,1);
+	-webkit-box-shadow: -5px 5px rgba(249,46,6,1);
+	box-shadow: -5px 5px rgba(249,46,6,1);
+	}
+#main-nav #tab-nav img{background:url(../images/skins-items/tab-nav-red.png) no-repeat;}
+
+
+/*DRIBBBLE*/
+body #mydribbble #mydribbble-stats a{background:#f92e03;color:#000;}
+#mydribbble #mydribbble-stats a:hover{background:#000;color:#f92e03;}
+body #mydribbble #mydribbble-drafts .plus-following{background:#f92e03;color:#000;}
+body #mydribbble #mydribbble-drafts ul li a{color:#f92e03;}
+#mydribbble #mydribbble-drafts ul li a{background:#000;color:#f92e03;}
+#mydribbble #mydribbble-drafts ul li a:hover{background:#f92e03;color:#000;}
+body #mydribbble .bx-next{background:url(../css/bx_styles/gray_next.png) no-repeat 0 -30px;}
+body #mydribbble .bx-prev {background: url(../css/bx_styles/gray_prev.png) no-repeat 0 -30px;}
+body #mydribbble .bx-next:hover, body #mydribbble .bx-prev:hover{background-position: 0 0 #FFF;}
+
+/*CONTACT FORM*/
+div.contact-form{border-top:5px solid #f92e03;}
+div.contact-form form input.form-submit:hover{background:#f92e03;color:#000;cursor:pointer;}
+body div.contact-form:hover{color:#f92e03;}
+
+/**** WORK SKIN GAL THUMBS FULL (DEFAULT WORK VIEW) ****/
+#work-detail-wrapper .item-wrapper .item .info-work, #work-detail-wrapper #work-gal-photo .item .info-work{border-top:8px solid #f92e03;}
+#work-detail-wrapper .item-wrapper span#closebt a:hover{background:url(../images/btn-close-yellow.png) no-repeat;}
+body #work-gal p a, #work-detail-wrapper #work-gal-photo p a{color:#f92e03;}
+#work-gal p a:hover, #work-detail-wrapper #work-gal-photo p a:hover{background:#f92e03;color:#000;}
+#work-gal h3{color:#f92e03;border-bottom:2px solid #f92e03;}
+#work-detail-wrapper #work-gal-photo h3{color:#f92e03;}
+#work-gal #fdgNav span#fdgPrev:hover, #work-gal-photo #fdgNav span#fdgPrev:hover{background:url(../images/skins-items/slide-pixel-l-arrow-hover-red.png) no-repeat center center;}
+#work-gal #fdgNav span#fdgNext:hover, #work-gal-photo #fdgNav span#fdgNext:hover{background:url(../images/skins-items/slide-pixel-r-arrow-hover-red.png) no-repeat center center;}
+#work-gal #pagination a:hover, #work-detail-wrapper #work-gal-photo #pagination a:hover{color:#f92e03;}
+#work-gal .info-extended, #work-detail-wrapper #work-gal-photo .info-extended{color:#f92e03;}
+.skin-02 #divThumbs, .skin-02 #work-detail-wrapper #work-gal-photo #divThumbs{border-top:8px solid #f92e03;}
+.skin-02 #up, .skin-02 #work-gal-photo #up{background-color:#f92e03;}
+.skin-02 #fdgNav span#fdgPrev.hide, .skin-02 #fdgNav span#fdgNext.hide{background:none;cursor: default;}
+
+
+/**** WORKS - HORIZONTAL SCROLL STYLES ****/
+li.copy span a{background:#f92e03;}
+#mcs_container .content li.copy ul li{background:#f92e03;}
+
+
+/*STYLES FOR SCROLLER IN LOADED WORKS WITH SCROLL PRESENTATION*/
+#mcs_container .dragger_container{border-top:1px dashed #f92e03;}
+#mcs_container .dragger:hover{background:#f92e03;}
+#mcs_container .dragger_pressed{background:#f92e03 url(mcsDraggerHover.png) no-repeat;}
+
+/*LIGHTBOX*/
+div.pp_default .pp_details{background-color:#f92e03;}
+
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 0) and (min-device-width: 1025px) {
+::-webkit-scrollbar-thumb:vertical{height: 50px;background-color: #f92e03;-webkit-border-radius: 3px;}
+}
+::selection{background: #f92e03;color:#404040;}
+::-moz-selection{background: #f92e03;color:#404040;}

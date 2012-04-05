@@ -1,0 +1,79 @@
+<link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+
+<span id="closebt" class="close-work-detail" styles="display:block;margin:100px;color:#000;"><a href="#">X</a></span>
+<div class="section" id="about">
+	<div class="section-wrapper">
+    	<p class="breadcrumbs">ABOUT // FOLIO TWO · FOLIO SERIES</p>
+        <p class="section-intro">JUST AN AMAZING PORTFOLIO, FLEXIBLE, RESPONSIVE AND CREATIVE FOR ALL TYPES OF PROFESSIONALS. SO ENJOY SHOWING YOUR WORKS TO YOUR CLIENTS AND PARTNERS.</p>
+        <h2 class="claim">YOU WILL LOVE YOUR WORK A little BIT MORE</h2>
+        <div class="section-content">
+
+<!-- scroll if needed content block -->
+<div id="mcs_container">
+	<div class="customScrollBox">
+		<div class="container">
+    		<div class="content">
+        		
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.</p>
+           
+			</div>
+		</div>
+		<div class="dragger_container">
+    		<div class="dragger"></div>
+		</div>
+	</div>
+    <a href="#" class="scrollUpBtn"></a> <a href="#" class="scrollDownBtn"></a>
+</div>
+
+<!-- content to show if javascript is disabled for the scroller -->
+<noscript>
+	<style type="text/css">
+		#mcs_container .customScrollBox{overflow:auto;}
+		#mcs_container .dragger_container{display:none;}
+	</style>
+</noscript>
+
+    </div>
+        <figure id="light"><img src="images/clients-img.png" alt="SEO KEYWORDS"></figure>
+        <!--<figure id="dark"><img src="images/skins-items/clients-light.png" alt="SEO KEYWORDS"></figure>-->
+    </div>
+</div>
+
+<script>
+$(window).load(function() {
+	mCustomScrollbars();
+});
+
+/*This two lines prevents that scroller appears a moment when page load
+with no enough content to show the scroll bar*/
+$(".dragger_container").css({"opacity": "0"});
+setTimeout("$('.dragger_container').animate({opacity: 1},10)", 1300); 
+
+function mCustomScrollbars(){
+	/* 
+	parameters: 
+	1) scroll type (values: "vertical" or "horizontal")
+	2) scroll easing amount (0 for no easing) 
+	3) scroll easing type 
+	4) extra bottom scrolling space for vertical scroll type only (minimum value: 1)
+	5) scrollbar height/width adjustment (values: "auto" or "fixed")
+	6) mouse-wheel support (values: "yes" or "no")
+	7) scrolling via buttons support (values: "yes" or "no")
+	8) buttons scrolling speed (values: 1-20, 1 being the slowest)
+	*/
+	$("#mcs_container").mCustomScrollbar("vertical",300,"easeOutCirc",1.05,"auto","yes","yes",10); 
+}
+
+/* function to fix the -10000 pixel limit of jquery.animate */
+$.fx.prototype.cur = function(){
+    if ( this.elem[this.prop] != null && (!this.elem.style || this.elem.style[this.prop] == null) ) {
+      return this.elem[ this.prop ];
+    }
+    var r = parseFloat( jQuery.css( this.elem, this.prop ) );
+    return typeof r == 'undefined' ? 0 : r;
+}
+</script>
+<script src="js/jquery.mCustomScrollbar.js"></script>

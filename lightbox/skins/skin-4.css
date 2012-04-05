@@ -1,0 +1,83 @@
+/*********************************************
+* STYLES FOR SKIN FOUR
+*********************************************/
+nav#main-nav{background:url(../images/backgrounds/skin-colch.jpg);}
+body #about h2,body #news #wdgt-news h2, body #news #wdgt-twitter h2, body #mydribbble h2, body #contact h2{border-top:2px solid #bcf902;border-bottom:2px solid #bcf902;}
+body #about a, body #news a, body #mydribbble a, body #contact a{background-color:#bcf902;}
+body #about a:hover,body #news a:hover, body #contact a:hover{background-color:#000;color:#bcf902;}
+
+/*NAV*/
+body #main-nav #nav-menu h4{color:#FFF;}
+nav#main-nav #nav-options ul li a{color:#8e8e8e;}
+body nav#main-nav #nav-options ul li.active, body nav#main-nav #nav-options ul li a:hover{
+	-moz-transition: all 0.2s; 
+	-webkit-transition: all 0.2s; 
+	-o-transition: all 0.2s; 
+	transition: all 0.2s;
+	background:#bcf902;
+	color:#000;
+	width:75%;
+	padding-left:5px;
+	}
+body nav#main-nav ul#network-menu li a{color:#8e8e8e;}
+nav#main-nav ul#network-menu li a:hover{border-top:5px solid #bcf902;color:#FFF;}
+#main-nav #nav-menu #main-logo{
+	-moz-box-shadow: -5px 5px rgba(188,249,2,1);
+	-webkit-box-shadow: -5px 5px rgba(188,249,2,1);
+	box-shadow: -5px 5px rgba(188,249,2,1);
+	}
+#main-nav #tab-nav img{background:url(../images/skins-items/tab-nav-green.png) no-repeat;}
+
+
+/*DRIBBBLE*/
+body #mydribbble #mydribbble-stats a{background:#bcf902;color:#000;}
+#mydribbble #mydribbble-stats a:hover{background:#000;color:#bcf902;}
+body #mydribbble #mydribbble-drafts .plus-following{background:#bcf902;color:#000;}
+body #mydribbble #mydribbble-drafts ul li a{color:#bcf902;}
+#mydribbble #mydribbble-drafts ul li a{background:#000;color:#bcf902;}
+#mydribbble #mydribbble-drafts ul li a:hover{background:#bcf902;color:#000;}
+body #mydribbble .bx-next{background:url(../css/bx_styles/gray_next.png) no-repeat 0 -30px;}
+body #mydribbble .bx-prev {background: url(../css/bx_styles/gray_prev.png) no-repeat 0 -30px;}
+body #mydribbble .bx-next:hover, body #mydribbble .bx-prev:hover{background-position: 0 0 #FFF;}
+
+/*CONTACT FORM*/
+div.contact-form{border-top:5px solid #bcf902;}
+div.contact-form form input.form-submit:hover{background:#bcf902;color:#000;cursor:pointer;}
+body div.contact-form:hover{color:#bcf902;}
+
+/**** WORK SKIN GAL THUMBS FULL (DEFAULT WORK VIEW) ****/
+#work-detail-wrapper .item-wrapper .item .info-work, #work-detail-wrapper #work-gal-photo .item .info-work{border-top:8px solid #bcf902;}
+#work-detail-wrapper .item-wrapper span#closebt a:hover{background:url(../images/btn-close-yellow.png) no-repeat;}
+body #work-gal p a, #work-detail-wrapper #work-gal-photo p a{color:#bcf902;}
+#work-gal p a:hover, #work-detail-wrapper #work-gal-photo p a:hover{background:#bcf902;color:#000;}
+#work-gal h3{color:#bcf902;border-bottom:2px solid #bcf902;}
+#work-detail-wrapper #work-gal-photo h3{color:#bcf902;}
+#work-gal #fdgNav span#fdgPrev:hover, #work-gal-photo #fdgNav span#fdgPrev:hover{background:url(../images/skins-items/slide-pixel-l-arrow-hover-green.png) no-repeat center center;}
+#work-gal #fdgNav span#fdgNext:hover, #work-gal-photo #fdgNav span#fdgNext:hover{background:url(../images/skins-items/slide-pixel-r-arrow-hover-green.png) no-repeat center center;}
+#work-gal #pagination a:hover, #work-detail-wrapper #work-gal-photo #pagination a:hover{color:#bcf902;}
+#work-gal .info-extended, #work-detail-wrapper #work-gal-photo .info-extended{color:#bcf902;}
+.skin-04 #divThumbs, .skin-04 #work-detail-wrapper #work-gal-photo #divThumbs{border-top:8px solid #bcf902;}
+.skin-04 #up, .skin-04 #work-gal-photo #up{background-color:#bcf902;}
+.skin-04 #fdgNav span#fdgPrev.hide, .skin-04 #fdgNav span#fdgNext.hide{background:none;cursor: default;}
+
+
+/**** WORKS - HORIZONTAL SCROLL STYLES ****/
+li.copy span a{background:#bcf902;}
+#mcs_container .content li.copy ul li{background:#bcf902;}
+
+
+/*STYLES FOR SCROLLER IN LOADED WORKS WITH SCROLL PRESENTATION*/
+#mcs_container .dragger_container{border-top:1px dashed #bcf902;}
+#mcs_container .dragger:hover{background:#bcf902;}
+#mcs_container .dragger_pressed{background:#bcf902 url(mcsDraggerHover.png) no-repeat;}
+
+/*LIGHTBOX*/
+div.pp_default .pp_details{background-color:#bcf902;}
+
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 0) and (min-device-width: 1025px) {
+::-webkit-scrollbar-thumb:vertical{height: 50px;background-color: #bcf902;-webkit-border-radius: 3px;}
+}
+::selection{background: #bcf902;color:#404040;}
+::-moz-selection{background: #bcf902;color:#404040;}

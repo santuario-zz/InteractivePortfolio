@@ -1,0 +1,38 @@
+<script src="js/jquery.tweet.js"></script>
+<span id="closebt" class="close-work-detail" styles="display:block;margin:100px;color:#000;"><a href="#">X</a></span>
+<div class="section" id="news">
+	<div class="section-wrapper">
+    	<p class="breadcrumbs">NEWS //  ADRIAN SANTUARIO · ( SCIENT + ART ) IST </p>
+        <div class="section-content">
+           <ul id="wdgt-news">
+           		<li><h2>Latest News</h2></li>
+           		<li><small class="news-date">31 · 04 · 2012</small>Mi research with a WiFly component for Arduino begins to show very satisfactory results.</li>
+                <li><small class="news-date">25 · 04 · 2012</small>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <a href="#" title="SEO KEYWORDS">standard dummy text</a> ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make with.</li>
+                <li><small class="news-date">15 · 04 · 2012</small> This week i'm started a github project called <a href="https://github.com/santuario/FlyManatiRobot" title="SEO KEYWORDS">Fly Manati Robot</a>. This is a Sketch to shows the swim of a Manati Robot (Made in Processing).</li>
+           </ul>
+           
+           <div id="wdgt-twitter" class="tweet">
+           			<h2>Tweets</h2>
+					<p id="tweetsFeed"></p>
+			</div><!--end div#twitter-->
+        </div>
+    </div>
+</div>
+
+<script>
+////////////////TWITTER///////////////
+$(document).ready(function(){
+        $(".tweet").tweet({
+            username: "AdrianSantuario",
+            join_text: "auto",
+            avatar_size: 32,
+            count: 3,
+            auto_join_text_default: "we said,", 
+            auto_join_text_ed: "we",
+            auto_join_text_ing: "we were",
+            auto_join_text_reply: "we replied to",
+            auto_join_text_url: "we were checking out",
+            loading_text: "loading tweets..."
+        });
+    });
+</script>
